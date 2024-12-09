@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+    <div class="analytics-page">
+        <h1>Social Media Analytics</h1>
+      
+        <!-- Date Range Filter -->
+        <div class="date-filter">
+          <label for="date-range">Select Date Range:</label>
+          <select id="date-range">
+            <option value="7days">Last 7 Days</option>
+            <option value="30days">Last 30 Days</option>
+            <option value="custom">Custom Range</option>
+          </select>
+        </div>
+      
+        <!-- Graphs Section -->
+        <div class="graphs-section">
+          <div class="line-graph-container">
+            <canvas id="engagement-trend"></canvas>
+          </div>
+          <div class="bar-chart-container">
+            <canvas id="platform-comparison"></canvas>
+          </div>
+        </div>
+      
+        <!-- Filters -->
+        <div class="analytics-filters">
+          <label for="platform-filter">Platform:</label>
+          <select id="platform-filter">
+            <option value="all">All Platforms</option>
+            <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+        <option value="x">X</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="tik tok">Tik Tok</option>
+        <option value="snapchat">Snapchat</option>
+        <option value="pinterest">Pinterest</option>
+        <option value="youtube">Youtube</option>
+        <option value="reddit">Reddit</option>
+        <option value="discord">Discord</option>
+        <option value="likee">Likee</option>
+        <option value="likomment">Likomment</option>
+        <option value="bluesky">Bluesky</option>
+        <option value="cheelee">Cheelee</option>
+        <option value="funny video">Funny Video</option>
+        <option value="Funzz">Funzz</option>
+        <option value="gem space">Gem Space</option>
+        <option value="lemo">Lemo</option>
+        <option value="line">Line</option>
+        <option value="signal">Signal</option>
+        <option value="tango">Tango</option>
+        <option value="triller">Triller</option>
+        <option value="tumblr">Tumblr</option>
+        <option value="vskit">Vskit</option>
+        <option value="Wizz">Wizz</option>
+        <option value="slack">Slack</option>
+        <option value="telegram">Telegram</option>
+        <option value="flickr">Flickr</option>
+        <option value="zalo">Zalo</option>
+        <option value="kakaoTalk">KakaoTalk</option>
+        <option value="twitch">Twitch</option>
+        <option value="imo">Imo</option>
+        <option value="meetup">Meetup</option>
+        <option value="medium">Medium</option>
+        <option value="clubhouse">Clubhouse</option>
+          </select>
+      
+          <label for="content-type-filter">Content Type:</label>
+          <select id="content-type-filter">
+            <option value="all">All Content</option>
+            <option value="video">Videos</option>
+            <option value="image">Images</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="top-performing-posts">
+        <h2>Top-Performing Posts</h2>
+        
+        <!-- Sorting Options -->
+        <div class="sorting-options">
+          <label for="sort-by">Sort by:</label>
+          <select id="sort-by">
+            <option value="likes">Most Likes</option>
+            <option value="shares">Most Shares</option>
+            <option value="comments">Most Comments</option>
+            <option value="platform">Platform</option>
+          </select>
+        </div>
+      
+        <!-- Post List -->
+        <div class="post-gallery">
+          <!-- Example Post Card -->
+          <div class="post-card">
+            <img src="example-post-thumbnail.jpg" alt="Post Thumbnail" class="post-thumbnail">
+            <div class="post-details">
+              <p class="post-caption">"Example caption for a top-performing post..."</p>
+              <ul class="post-metrics">
+                <li>Likes: <span>1,234</span></li>
+                <li>Shares: <span>567</span></li>
+                <li>Comments: <span>89</span></li>
+                <li>Impressions: <span>10,000</span></li>
+                <li>Click-through Rate: <span>2.5%</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="account-insights">
+        <h2>Account Insights</h2>
+      
+        <!-- Statistics Overview -->
+        <div class="stats-overview">
+          <h3>Statistics Overview</h3>
+          <ul class="stats-list">
+            <li>
+              <strong>Follower Growth:</strong> 15,000 
+              <span class="growth positive">+15%</span>
+            </li>
+            <li>
+              <strong>Impressions:</strong> 120,000 
+              <span class="growth positive">+10%</span>
+            </li>
+            <li>
+              <strong>Reach:</strong> 50,000 
+              <span class="growth negative">-5%</span>
+            </li>
+            <li>
+              <strong>Engagement Rate:</strong> 8% 
+              <span class="growth positive">+2%</span>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Platform-Specific Insights -->
+        <div class="platform-insights">
+          <h3>Platform-Specific Insights</h3>
+          <div class="platform-card">
+            <img src="instagram-logo.png" alt="Instagram Logo" class="platform-logo">
+            <ul class="platform-stats">
+              <li>Profile Visits: <strong>12,000</strong></li>
+              <li>Posts: <strong>30</strong></li>
+              <li>Likes: <strong>4,500</strong></li>
+            </ul>
+          </div>
+          <div class="platform-card">
+            <img src="twitter-logo.png" alt="Twitter Logo" class="platform-logo">
+            <ul class="platform-stats">
+              <li>Retweets: <strong>500</strong></li>
+              <li>Likes: <strong>1,200</strong></li>
+              <li>Mentions: <strong>150</strong></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Visualizations -->
+        <div class="visualizations">
+          <h3>Follower Growth</h3>
+          <canvas id="followerGrowthChart"></canvas>
+        </div>
+      
+        <!-- Account Health Status -->
+        <div class="account-health">
+          <h3>Account Health</h3>
+          <ul>
+            <li>
+              <strong>Instagram:</strong> Active
+              <span class="recommendation">Recommendation: Increase post frequency.</span>
+            </li>
+            <li>
+              <strong>Twitter:</strong> Inactive
+              <span class="recommendation">Recommendation: Post more consistently.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+</body>
+</html>

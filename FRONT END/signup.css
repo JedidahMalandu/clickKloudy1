@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+/* Login Form Section */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form .form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.login-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form .forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.login-form .forgot-password a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.login-form .forgot-password a:hover {
+  color: #0056b3;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%; /* Reduce the width to fit smaller screens */
+    padding: 15px; /* Reduce padding for a compact design */
+    box-shadow: none; /* Remove box-shadow for simplicity */
+    border: none; /* Remove borders for a cleaner look */
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px; /* Reduce spacing */
+  }
+
+  .login-form .form-group label {
+    font-size: 0.9rem; /* Make labels slightly smaller */
+  }
+
+  .login-form .form-group input {
+    padding: 8px; /* Reduce input field padding */
+    font-size: 0.9rem; /* Adjust input text size */
+  }
+
+  .login-form .forgot-password a {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .login-btn {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 8px; /* Reduce padding for the button */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%; /* Further reduce width for very small screens */
+    padding: 10px; /* Compact padding */
+  }
+
+  .login-container h2 {
+    font-size: 1.3rem; /* Smaller heading for very small screens */
+  }
+
+  .login-form .form-group input {
+    padding: 6px; /* Compact input field padding */
+    font-size: 0.85rem; /* Smaller text in input fields */
+  }
+
+  .login-btn {
+    font-size: 0.85rem; /* Smaller button text */
+    padding: 6px; /* Compact button padding */
+  }
+}
+
+/* Container for the sign-up form */
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .signup-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .signup-form .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .signup-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signup-form small {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  .social-signup {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .social-signup button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4285F4; /* Google blue color */
+    color: white;
+  }
+  
+  #facebook-signup {
+    background-color: #3b5998; /* Facebook blue color */
+  }
+  
+  /* Submit button styling */
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .signup-container {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    .signup-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .signup-form .form-group input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .social-signup button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .signup-btn {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .cta-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cta-links p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .cta-links .cta-link {
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .cta-links .cta-link:hover {
+    text-decoration: underline;
+    color: #45a049;
+  }
+  
+  .cta-links .existing-user,
+  .cta-links .new-user {
+    margin: 10px 0;
+  }
+    
+/* Default styles for desktop */
+.login-container,
+.signup-container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-password {
+  align-self: flex-end;
+  margin-top: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .login-container,
+  .signup-container {
+    width: 60%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .login-container,
+  .signup-container {
+    width: 90%;
+  }
+}

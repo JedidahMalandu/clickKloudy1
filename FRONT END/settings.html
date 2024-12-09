@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <header>
+    <h1>Settings</h1>
+    <p>Customize your experience and manage your account.</p>
+  </header>
+
+  <main>
+    <section class="settings-section">
+      <h2>Profile Settings</h2>
+      <form id="settingsForm">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <small id="emailMessage"></small>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="current-password">Current Password:</label>
+          <input type="password" id="current-password" name="current-password" placeholder="Enter current password" required>
+        </div>
+        <div class="form-group">
+          <label for="new-password">New Password:</label>
+          <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required>
+          <small id="passwordStrength">Password Strength: Weak</small>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm New Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="form-group">
+          <label for="profile-picture">Profile Picture:</label>
+          <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+          <button type="button" id="removePicture">Remove Picture</button>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </section>
+  </main>
+
+  <header>
+    <h1>Account Management</h1>
+  </header>
+  <main class="container">
+    <!-- Linked Accounts Overview -->
+    <section class="linked-accounts">
+      <h2>Linked Accounts</h2>
+      <div class="accounts">
+        <!-- Example of a linked account -->
+        <div class="account">
+          <img src="facebook-logo.png" alt="Facebook" class="platform-logo">
+          <div class="account-info">
+            <h3>John Doe</h3>
+            <p>Status: <span class="status active">Active</span></p>
+          </div>
+          <div class="account-actions">
+            <button class="btn reconnect">Reconnect</button>
+            <button class="btn remove">Remove</button>
+          </div>
+        </div>
+
+        <div class="account">
+          <img src="twitter-logo.png" alt="Twitter" class="platform-logo">
+          <div class="account-info">
+            <h3>@john_doe</h3>
+            <p>Status: <span class="status disconnected">Disconnected</span></p>
+          </div>
+          <div class="account-actions">
+            <button class="btn reconnect">Reconnect</button>
+            <button class="btn remove">Remove</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Account Section -->
+    <section class="add-account">
+      <h2>Add New Account</h2>
+      <button class="btn add">Add Account</button>
+    </section>
+
+    <!-- Account Limit Indicator -->
+    <section class="account-limit">
+      <p>Accounts Linked: <span id="linked-count">15</span>/<span id="max-accounts">1,000</span></p>
+    </section>
+  </main>
+
+  <div class="container">
+    <h1>Notification Settings</h1>
+    <div class="notification-settings">
+      
+      <!-- Email Notifications -->
+      <div class="notification-category">
+        <h2>Email Notifications</h2>
+        <div class="notification-item">
+          <label for="email-new-features">New Features</label>
+          <input type="checkbox" id="email-new-features" class="toggle-switch" checked />
+        </div>
+        <div class="notification-item">
+          <label for="email-activity-updates">Activity Updates</label>
+          <input type="checkbox" id="email-activity-updates" class="toggle-switch" />
+        </div>
+        <div class="notification-item">
+          <label for="email-scheduled-reminders">Scheduled Post Reminders</label>
+          <input type="checkbox" id="email-scheduled-reminders" class="toggle-switch" />
+        </div>
+      </div>
+
+      <!-- In-App Notifications -->
+      <div class="notification-category">
+        <h2>In-App Notifications</h2>
+        <div class="notification-item">
+          <label for="inapp-post-published">Post Published</label>
+          <input type="checkbox" id="inapp-post-published" class="toggle-switch" checked />
+        </div>
+        <div class="notification-item">
+          <label for="inapp-account-activity">Account Activity</label>
+          <input type="checkbox" id="inapp-account-activity" class="toggle-switch" />
+        </div>
+      </div>
+
+      <!-- Push Notifications -->
+      <div class="notification-category">
+        <h2>Push Notifications</h2>
+        <div class="notification-item">
+          <label for="push-notifications">Enable Push Notifications</label>
+          <input type="checkbox" id="push-notifications" class="toggle-switch" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Privacy Options</h1>
+    <div class="privacy-settings">
+      
+      <!-- Data Usage -->
+      <div class="privacy-category">
+        <h2>Data Usage</h2>
+        <div class="privacy-item">
+          <label for="download-data">Download Your Data</label>
+          <button id="download-data" class="action-button">Download</button>
+        </div>
+        <div class="privacy-item">
+          <label for="analytics-collection">Enable Analytics Collection</label>
+          <input type="checkbox" id="analytics-collection" class="toggle-switch" checked />
+        </div>
+      </div>
+
+      <!-- Account Privacy -->
+      <div class="privacy-category">
+        <h2>Account Privacy</h2>
+        <div class="privacy-item">
+          <label for="private-account">Make Account Private</label>
+          <input type="checkbox" id="private-account" class="toggle-switch" />
+        </div>
+      </div>
+
+      <!-- Delete Account -->
+      <div class="privacy-category">
+        <h2>Delete Account</h2>
+        <button id="delete-account" class="delete-button">Delete Account</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Confirmation Dialog -->
+  <div id="confirmation-dialog" class="confirmation-dialog">
+    <div class="confirmation-content">
+      <h3>Are you sure?</h3>
+      <p>Your data will be permanently deleted and cannot be recovered. Are you sure you want to delete your account?</p>
+      <button id="confirm-delete" class="confirm-button">Yes, Delete</button>
+      <button id="cancel-delete" class="cancel-button">Cancel</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 clickKloudy. All Rights Reserved.</p>
+  </footer>
+
+  <script src="settings.js"></script>
+</body>
+</html>

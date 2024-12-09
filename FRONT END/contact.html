@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section id="contact-us">
+        <div class="contact-container">
+          <h2>Contact Us</h2>
+          <p>For any inquiries or support requests, please fill out the form below and we'll get back to you within 24 hours.</p>
+      
+          <form id="contact-form" method="POST" action="submit-form.php">
+            <!-- Full Name -->
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required placeholder="Your Full Name">
+      
+            <!-- Email Address -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+      
+            <!-- Subject -->
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="general-inquiry">General Inquiry</option>
+              <option value="technical-support">Technical Support</option>
+              <option value="billing">Billing</option>
+            </select>
+      
+            <!-- Message -->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+      
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+          </form>
+      
+          <!-- Feedback After Submission -->
+          <div id="feedback-message" class="hidden">
+            <p>Thank you for reaching out! We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="support-section">
+        <h2>Need More Help?</h2>
+        
+        <!-- Support Email -->
+        <div class="support-email">
+          <p>Prefer to email us directly? Reach us at:</p>
+          <a href="mailto:support@clickkloudy.com" class="email-link">support@clickkloudy.com</a>
+        </div>
+      
+        <!-- FAQ Link -->
+        <div class="faq-link">
+          <p>Check our <a href="faq.html">FAQ page</a> for quick answers to common questions.</p>
+        </div>
+      
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <p>Follow us on social media:</p>
+          <div class="social-icons">
+            <a href="https://facebook.com/ClickKloudy" target="_blank" aria-label="Facebook">
+              <img src="images/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com/ClickKloudy" target="_blank" aria-label="Twitter">
+              <img src="images/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://instagram.com/ClickKloudy" target="_blank" aria-label="Instagram">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/company/ClickKloudy" target="_blank" aria-label="LinkedIn">
+              <img src="images/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      
+</body>
+</html>

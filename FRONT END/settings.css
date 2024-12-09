@@ -1,0 +1,599 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4e85ce;
+    color: white;
+  }
+  
+  h1 {
+    margin-bottom: 5px;
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .settings-section {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .settings-section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border-color: #4c56af;
+    outline: none;
+  }
+  
+  small {
+    display: block;
+    font-size: 0.9em;
+    color: gray;
+    margin-top: 5px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4c53af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    background-color: #4c53af;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+      margin: 10px 15px;
+      padding: 15px;
+    }
+  
+    header h1 {
+      font-size: 1.8em;
+    }
+  
+    .profile-picture img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form button {
+      font-size: 0.9em;
+    }
+  
+    .profile-picture img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .profile-picture button {
+      font-size: 0.8em;
+      padding: 6px 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    header {
+      padding: 15px 5px;
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+    }
+  
+    .profile-picture {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-picture img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    form {
+      gap: 10px;
+    }
+  
+    form button {
+      font-size: 0.85em;
+      padding: 8px 15px;
+    }
+  }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Account Management Section */
+  .account-management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .account-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.add {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .btn.add:hover {
+    background-color: #45a049;
+  }
+  
+  .btn.remove {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn.remove:hover {
+    background-color: #d32f2f;
+  }
+  
+  .btn.reconnect {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .btn.reconnect:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Linked Accounts */
+  .accounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .account {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .account img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .account .account-info h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .account .status {
+    font-weight: bold;
+  }
+  
+  .status.active {
+    color: #4caf50;
+  }
+  
+  .status.disconnected {
+    color: #f44336;
+  }
+  
+  /* Account Limit Indicator */
+  .account-limit {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 992px) {
+    .account-management {
+      gap: 15px;
+    }
+  
+    .btn {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  
+    .accounts {
+      gap: 15px;
+    }
+  
+    .account {
+      width: 45%; /* Two accounts per row */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    .btn {
+      font-size: 0.85em;
+      padding: 8px 14px;
+    }
+  
+    .account {
+      width: 100%; /* Full-width for each account on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.6em;
+    }
+  
+    .btn {
+      width: 100%; /* Buttons become full-width */
+      padding: 10px;
+      font-size: 0.9em;
+    }
+  
+    .account img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .account {
+      width: 100%; /* Full-width accounts */
+      padding: 15px;
+    }
+  
+    .account-info h3 {
+      font-size: 1em;
+    }
+  
+    .account-limit {
+      font-size: 0.9em;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+  }
+  
+  .notification-settings {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-category {
+    margin-bottom: 20px;
+  }
+  
+  .notification-category h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .notification-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .notification-item label {
+    font-size: 1.2em;
+  }
+  
+  .toggle-switch {
+    width: 50px;
+    height: 30px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding: 15px;
+    }
+    h1 {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .notification-category h2 {
+      font-size: 1.6em;
+    }
+    .notification-item label {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .notification-category h2 {
+      font-size: 1.4em;
+    }
+    .notification-item label {
+      font-size: 1em;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      padding: 5px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    .notification-category h2 {
+      font-size: 1.2em;
+    }
+    .notification-item label {
+      font-size: 0.9em;
+    }
+    .toggle-switch {
+      width: 45px;
+      height: 25px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+  }
+  
+  .privacy-settings {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-category {
+    margin-bottom: 20px;
+  }
+  
+  .privacy-category h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .privacy-item label {
+    font-size: 1.2em;
+  }
+  
+  .toggle-switch {
+    width: 50px;
+    height: 30px;
+  }
+  
+  .action-button, .delete-button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #FF5733;
+  }
+  
+  .confirmation-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .confirmation-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .confirm-button, .cancel-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button {
+    background-color: #FF5733;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding: 15px;
+    }
+    h1 {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .privacy-category h2 {
+      font-size: 1.6em;
+    }
+    .privacy-item label {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .privacy-category h2 {
+      font-size: 1.4em;
+    }
+    .privacy-item label {
+      font-size: 1em;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      padding: 5px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    .privacy-category h2 {
+      font-size: 1.2em;
+    }
+    .privacy-item label {
+      font-size: 0.9em;
+    }
+    .toggle-switch {
+      width: 45px;
+      height: 25px;
+    }
+  }
+  

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="logo-container">
+      <a href="/dashboard">
+        <img src="clickkloudy-logo.png" alt="ClickKloudy Logo" class="logo" />
+      </a>
+    </div>
+    <nav class="navigation">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
+        <li class="nav-item"><a href="/analytics" class="nav-link">Analytics</a></li>
+        <li class="nav-item"><a href="/settings" class="nav-link">Settings</a></li>
+        <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-----------------Account overview------------>
+  <section class="account-overview">
+    <h2>Linked Social Media Accounts</h2>
+    <div class="account-list">
+      <!-- Example Account Item -->
+      <div class="account-item">
+        <img src="facebook-logo.png" alt="Facebook Logo" class="platform-logo">
+        <div class="account-info">
+          <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+          <div>
+            <p class="username">@exampleuser</p>
+            <p class="status active">Active</p> <!-- Status Indicator -->
+          </div>
+        </div>
+      </div>
+  
+      <!-- Add More Accounts -->
+      <div class="add-account">
+        <button class="add-account-btn">+ Add New Account</button>
+      </div>
+    </div>
+  </section>
+ 
+  
+  <!-------------Post creation panel--------->
+  <div class="post-creation-panel">
+    <h2>Create a New Post</h2>
+  
+    <!-- Media Upload Section -->
+    <div class="media-upload">
+      <label for="media-upload" class="upload-label">Upload Media (Image/Video)</label>
+      <input type="file" id="media-upload" class="media-input" accept="image/*,video/*" multiple />
+      <div class="drag-drop-area">
+        <span>Drag and drop files here or click to upload</span>
+      </div>
+    </div>
+  
+    <!-- Text Area Section -->
+    <div class="text-area">
+      <label for="caption" class="caption-label">Caption</label>
+      <textarea id="caption" class="caption-input" rows="5" maxlength="280" placeholder="Write your caption here..."></textarea>
+      <div class="char-count">
+        <span id="char-count">0/500</span>
+      </div>
+    </div>
+  
+    <!-- Account Selection Dropdown -->
+    <div class="account-selection">
+      <label for="accounts" class="account-label">Select Accounts</label>
+      <select id="accounts" class="account-dropdown" multiple>
+        <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+        <option value="x">X</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="tik tok">Tik Tok</option>
+        <option value="snapchat">Snapchat</option>
+        <option value="pinterest">Pinterest</option>
+        <option value="youtube">Youtube</option>
+        <option value="reddit">Reddit</option>
+        <option value="discord">Discord</option>
+        <option value="likee">Likee</option>
+        <option value="likomment">Likomment</option>
+        <option value="bluesky">Bluesky</option>
+        <option value="cheelee">Cheelee</option>
+        <option value="funny video">Funny Video</option>
+        <option value="Funzz">Funzz</option>
+        <option value="gem space">Gem Space</option>
+        <option value="lemo">Lemo</option>
+        <option value="line">Line</option>
+        <option value="signal">Signal</option>
+        <option value="tango">Tango</option>
+        <option value="triller">Triller</option>
+        <option value="tumblr">Tumblr</option>
+        <option value="vskit">Vskit</option>
+        <option value="Wizz">Wizz</option>
+        <option value="slack">Slack</option>
+        <option value="telegram">Telegram</option>
+        <option value="flickr">Flickr</option>
+        <option value="zalo">Zalo</option>
+        <option value="kakaoTalk">KakaoTalk</option>
+        <option value="twitch">Twitch</option>
+        <option value="imo">Imo</option>
+        <option value="meetup">Meetup</option>
+        <option value="medium">Medium</option>
+        <option value="clubhouse">Clubhouse</option>
+      </select>
+    </div>
+  
+    <!-- Post Now Button -->
+    <div class="post-button-container">
+      <button class="post-now-btn" id="post-now">Post Now</button>
+    </div>
+  
+    <!-- Scheduled Post Option -->
+    <div class="schedule-post">
+      <label for="schedule-time">Schedule Post</label>
+      <input type="datetime-local" id="schedule-time" class="schedule-input" />
+    </div>
+  </div>
+  
+  <!------------scheduled posts section------>
+  <div class="scheduled-posts-section">
+    <h2>Scheduled Posts</h2>
+  
+    <!-- Filters Section -->
+    <div class="filters">
+      <label for="filter-date">Filter by Date:</label>
+      <input type="date" id="filter-date" class="filter-input" />
+  
+      <label for="filter-platform">Filter by Platform:</label>
+      <select id="filter-platform" class="filter-input">
+        <option value="">All Platforms</option>
+        <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+        <option value="x">X</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="tik tok">Tik Tok</option>
+        <option value="snapchat">Snapchat</option>
+        <option value="pinterest">Pinterest</option>
+        <option value="youtube">Youtube</option>
+        <option value="reddit">Reddit</option>
+        <option value="discord">Discord</option>
+        <option value="likee">Likee</option>
+        <option value="likomment">Likomment</option>
+        <option value="bluesky">Bluesky</option>
+        <option value="cheelee">Cheelee</option>
+        <option value="funny video">Funny Video</option>
+        <option value="Funzz">Funzz</option>
+        <option value="gem space">Gem Space</option>
+        <option value="lemo">Lemo</option>
+        <option value="line">Line</option>
+        <option value="signal">Signal</option>
+        <option value="tango">Tango</option>
+        <option value="triller">Triller</option>
+        <option value="tumblr">Tumblr</option>
+        <option value="vskit">Vskit</option>
+        <option value="Wizz">Wizz</option>
+        <option value="slack">Slack</option>
+        <option value="telegram">Telegram</option>
+        <option value="flickr">Flickr</option>
+        <option value="zalo">Zalo</option>
+        <option value="kakaoTalk">KakaoTalk</option>
+        <option value="twitch">Twitch</option>
+        <option value="imo">Imo</option>
+        <option value="meetup">Meetup</option>
+        <option value="medium">Medium</option>
+        <option value="clubhouse">Clubhouse</option>
+      </select>
+  
+      <label for="filter-account">Filter by Account:</label>
+      <select id="filter-account" class="filter-input">
+        <option value="">All Accounts</option>
+        <option value="user1">User 1</option>
+        <option value="user2">User 2</option>
+        <option value="user3">User 3</option>
+      </select>
+    </div>
+  
+    <!-- Upcoming Posts List -->
+    <div class="posts-list">
+      <div class="post-card">
+        <div class="post-media">
+          <img src="thumbnail1.jpg" alt="Post 1 Thumbnail" class="post-thumbnail" />
+        </div>
+        <div class="post-details">
+          <p class="post-caption">Caption for post 1...</p>
+          <p class="post-platforms">Platforms: Facebook, Instagram</p>
+          <p class="post-scheduled-time">Scheduled for: 2024-12-01 10:00 AM</p>
+        </div>
+        <div class="post-actions">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+  
+      <div class="post-card">
+        <div class="post-media">
+          <img src="thumbnail2.jpg" alt="Post 2 Thumbnail" class="post-thumbnail" />
+        </div>
+        <div class="post-details">
+          <p class="post-caption">Caption for post 2...</p>
+          <p class="post-platforms">Platforms: Twitter, LinkedIn</p>
+          <p class="post-scheduled-time">Scheduled for: 2024-12-02 11:00 AM</p>
+        </div>
+        <div class="post-actions">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!----------------Active feed-------->
+  <section class="activity-feed">
+    <h2>Activity Feed</h2>
+  
+    <!-- Recent Posts Section -->
+    <div class="recent-posts">
+      <h3>Recent Posts</h3>
+      <div class="post-card">
+        <div class="post-header">
+          <img src="platform-logo.jpg" alt="Platform Logo" class="platform-logo">
+          <span class="post-time">2 mins ago</span>
+        </div>
+        <div class="post-details">
+          <p class="post-caption">Caption for the recent post...</p>
+          <span class="post-platform">Facebook</span>
+        </div>
+      </div>
+      <!-- More post-cards here -->
+    </div>
+  
+    <!-- Account Updates Section -->
+    <div class="account-updates">
+      <h3>Account Updates</h3>
+      <div class="update-card">
+        <p>New account linked: <strong>Instagram</strong></p>
+        <span class="update-time">5 mins ago</span>
+      </div>
+      <div class="update-card">
+        <p>Account disconnected: <strong>Twitter</strong></p>
+        <span class="update-time">10 mins ago</span>
+      </div>
+      <!-- More update-cards here -->
+    </div>
+  
+    <!-- Error Notifications Section -->
+    <div class="error-notifications">
+      <h3>Error Notifications</h3>
+      <div class="error-card error-failed-post">
+        <p>Failed to post on <strong>Instagram</strong></p>
+        <span class="error-time">2 hours ago</span>
+        <span class="error-message">Error: Invalid media format</span>
+      </div>
+      <!-- More error-cards here -->
+    </div>
+  </section>
+  
+</body>
+</html>

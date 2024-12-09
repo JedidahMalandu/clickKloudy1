@@ -1,0 +1,820 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+/* Header Styling */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e90ff;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.navigation .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navigation .nav-item {
+  margin-left: 1.5rem;
+}
+
+.navigation .nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navigation .nav-link:hover {
+  color: #add8e6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo-container {
+      margin-bottom: 1rem;
+  }
+
+  .navigation .nav-links {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .navigation .nav-item {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+  }
+
+  .navigation .nav-link {
+      display: block;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-header {
+      padding: 1rem;
+  }
+
+  .logo {
+      width: 100px;
+  }
+
+  .navigation .nav-links {
+      font-size: 0.9rem;
+  }
+}
+
+/* Account Overview Section */
+.account-overview {
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-overview h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.account-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(33.33% - 1rem); /* Responsive layout */
+  min-width: 300px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.account-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.platform-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+  border: 2px solid #1e90ff;
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.status {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+}
+
+.status.active {
+  background-color: #28a745;
+}
+
+.status.inactive {
+  background-color: #dc3545;
+}
+
+.add-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.add-account-btn {
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-account-btn:hover {
+  background-color: #1c7ed6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .account-item {
+      width: calc(50% - 1rem);
+  }
+
+  .add-account-btn {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .account-item {
+      width: 100%;
+  }
+}
+
+/* Post Creation Panel */
+.post-creation-panel {
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-creation-panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Media Upload Section */
+.media-upload {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.upload-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.media-input {
+  display: none; /* Hidden default file input */
+}
+
+.drag-drop-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 2px dashed #1e90ff;
+  border-radius: 8px;
+  background-color: #f4f4f9;
+  color: #666;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+}
+
+.drag-drop-area:hover {
+  background-color: #eaf6ff;
+  border-color: #1c7ed6;
+}
+
+.drag-drop-area span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .drag-drop-area {
+      padding: 1rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-creation-panel {
+      padding: 1rem;
+  }
+
+  .drag-drop-area {
+      padding: 0.8rem;
+  }
+
+  .drag-drop-area span {
+      font-size: 0.85rem;
+  }
+}
+
+/* Text Area Section */
+.text-area {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.caption-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.caption-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caption-input:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+  outline: none;
+}
+
+.char-count {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Account Selection Dropdown */
+.account-selection {
+  margin-bottom: 1.5rem;
+}
+
+.account-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.account-dropdown {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.account-dropdown:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Post Now Button */
+.post-button-container {
+  text-align: center;
+}
+
+.post-now-btn {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post-now-btn:hover {
+  background-color: #1c7ed6;
+  transform: scale(1.05);
+}
+
+.post-now-btn:active {
+  background-color: #155fa0;
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .caption-input, .account-dropdown {
+      padding: 0.7rem;
+      font-size: 0.9rem;
+  }
+
+  .post-now-btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .caption-input {
+      font-size: 0.85rem;
+  }
+
+  .char-count {
+      font-size: 0.8rem;
+  }
+
+  .post-now-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+  }
+}
+
+/* Schedule Post Section */
+.schedule-post {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-post label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.schedule-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.schedule-input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Scheduled Posts Section */
+.scheduled-posts-section {
+  margin-top: 2rem;
+}
+
+.scheduled-posts-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.filters label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.filter-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+/* Posts List */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-card {
+  display: flex;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Media */
+.post-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Post Details */
+.post-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-caption {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.post-platforms,
+.post-scheduled-time {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #1c7ed6;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #d94848;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+  }
+
+  .post-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .post-thumbnail {
+      width: 100px;
+      height: 100px;
+  }
+
+  .post-actions {
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filters label,
+  .post-caption {
+      font-size: 0.9rem;
+  }
+
+  .post-thumbnail {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+/* Activity Feed Section */
+.activity-feed {
+  margin-top: 2rem;
+}
+
+.activity-feed h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Recent Posts */
+.recent-posts {
+  margin-bottom: 2rem;
+}
+
+.recent-posts h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Post Card */
+.post-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.platform-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-time {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.post-caption {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.post-platform {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Notifications Section */
+.notifications h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.notification-card {
+  background-color: #e9f5ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-message {
+  font-size: 1rem;
+  color: #333;
+}
+
+.notification-time {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .post-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-details {
+    margin-left: 0;
+  }
+}
+
+/* Account Updates Section */
+.account-updates {
+  margin-top: 2rem;
+}
+
+.account-updates h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.update-card {
+  background-color: #e9ffe9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.update-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.update-time {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Error Notifications Section */
+.error-notifications {
+  margin-top: 2rem;
+}
+
+.error-notifications h3 {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.error-card {
+  background-color: #f8d7da;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-failed-post {
+  border-left: 4px solid #e74c3c;
+}
+
+.error-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  color: #d9534f;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.error-time {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .update-card,
+  .error-card {
+    padding: 0.8rem;
+  }
+  
+  .update-card p,
+  .error-card p {
+    font-size: 0.95rem;
+  }
+
+  .update-time,
+  .error-time {
+    font-size: 0.85rem;
+  }
+}

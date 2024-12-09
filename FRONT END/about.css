@@ -1,0 +1,295 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+/* About Us Section Styles */
+#about-us {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #333;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #about-us h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  #about-us .mission-statement {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
+    #about-us h2 {
+      font-size: 2rem;
+    }
+  
+    #about-us .mission-statement {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #about-us h2 {
+      font-size: 2.2rem;
+    }
+  
+    #about-us .mission-statement {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #about-us h2 {
+      font-size: 2.8rem;
+    }
+  
+    #about-us .mission-statement {
+      font-size: 1.3rem;
+    }
+  }
+
+/* Our Story Section Styles */
+#our-story {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+  }
+  
+  #our-story .story-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #our-story h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  #our-story .story-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design for Our Story Section */
+  @media screen and (max-width: 900px) {
+    #our-story h2 {
+      font-size: 1.8rem;
+    }
+  
+    #our-story .story-text {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #our-story h2 {
+      font-size: 1.6rem;
+    }
+  
+    #our-story .story-text {
+      font-size: 0.95rem;
+      padding: 0 15px;
+    }
+  }
+
+/* Core Features Section Styles */
+#core-features {
+    background-color: #ffffff;
+    padding: 40px 20px;
+  }
+  
+  #core-features .features-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #core-features h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 30px;
+  }
+  
+  #core-features .features-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #core-features .feature-item {
+    margin-bottom: 30px;
+  }
+  
+  #core-features .feature-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #core-features .feature-item p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design for Core Features Section */
+  @media screen and (max-width: 900px) {
+    #core-features h2 {
+      font-size: 1.8rem;
+    }
+  
+    #core-features .feature-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    #core-features .feature-item p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #core-features h2 {
+      font-size: 1.6rem;
+    }
+  
+    #core-features .feature-item h3 {
+      font-size: 1.2rem;
+    }
+  
+    #core-features .feature-item p {
+      font-size: 0.95rem;
+    }
+  
+    #core-features .features-list {
+      padding: 0 10px;
+    }
+  }
+
+/* Vision and Future Goals Section Styles */
+#vision-future {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+  }
+  
+  #vision-future .vision-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #vision-future h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  #vision-future .vision-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design for Vision and Future Goals Section */
+  @media screen and (max-width: 900px) {
+    #vision-future h2 {
+      font-size: 1.8rem;
+    }
+  
+    #vision-future .vision-text {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #vision-future h2 {
+      font-size: 1.6rem;
+    }
+  
+    #vision-future .vision-text {
+      font-size: 0.95rem;
+      padding: 0 15px;
+    }
+  }
+
+/* Footer Section Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #footer h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  #footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  #footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  #footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Footer Links Section */
+  @media screen and (max-width: 900px) {
+    #footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #footer .social-links, #footer .quick-links {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #footer h3 {
+      font-size: 1.3rem;
+    }
+  
+    #footer a {
+      font-size: 0.95rem;
+    }
+  }
+  

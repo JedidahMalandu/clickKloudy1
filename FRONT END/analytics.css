@@ -1,0 +1,342 @@
+
+/*analytics page*/
+.analytics-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .date-filter,
+  .analytics-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .date-filter label,
+  .analytics-filters label {
+    font-weight: bold;
+  }
+  
+  .graphs-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .line-graph-container,
+  .bar-chart-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  canvas {
+    width: 100%;
+    height: 300px;
+  }
+  
+  /* Medium screens (tablets) */
+  @media (max-width: 1024px) {
+    .graphs-section {
+      flex-direction: column; /* Stack graphs vertically */
+      align-items: center;
+    }
+  
+    .line-graph-container,
+    .bar-chart-container {
+      max-width: 90%; /* Reduce width for better fit */
+    }
+  
+    .date-filter,
+    .analytics-filters {
+      flex-direction: column; /* Stack filters vertically */
+      align-items: stretch; /* Ensure full-width filters */
+    }
+  }
+  
+  /* Small screens (mobile devices) */
+  @media (max-width: 768px) {
+    .analytics-page {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    h1 {
+      font-size: 1.5em; /* Adjust heading size */
+      text-align: center; /* Center-align heading */
+    }
+  
+    .graphs-section {
+      gap: 15px; /* Reduce gap between sections */
+    }
+  
+    .date-filter label,
+    .analytics-filters label {
+      margin-bottom: 5px; /* Add spacing between labels and inputs */
+    }
+  
+    .date-filter select,
+    .analytics-filters select {
+      width: 100%; /* Full-width dropdowns for smaller screens */
+    }
+  
+    canvas {
+      height: 200px; /* Adjust graph height for smaller screens */
+    }
+  }
+  
+  /* Extra small screens (mobile devices, narrow width) */
+  @media (max-width: 480px) {
+    .line-graph-container,
+    .bar-chart-container {
+      max-width: 100%; /* Use full width for narrow devices */
+    }
+  
+    h1 {
+      font-size: 1.2em; /* Further reduce heading size */
+    }
+  
+    .analytics-filters,
+    .date-filter {
+      gap: 5px; /* Reduce spacing between filters */
+    }
+  }
+  
+  /*analytics performing*/
+  /* General Styles */
+  .top-performing-posts {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .top-performing-posts h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sorting-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .sorting-options label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .sorting-options select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Post Gallery Styles */
+  .post-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .post-details {
+    padding: 15px;
+  }
+  
+  .post-caption {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .post-metrics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .post-metrics li {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    .post-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .post-card {
+      width: 90%; /* Full width for smaller devices */
+    }
+  
+    .sorting-options {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .sorting-options label,
+    .sorting-options select {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .post-thumbnail {
+      height: 150px; /* Reduce thumbnail size */
+    }
+  
+    .post-details {
+      padding: 10px;
+    }
+  
+    .post-metrics li {
+      font-size: 0.8em; /* Adjust text size for readability */
+    }
+  }
+  
+  /* General Styles */
+  .account-insights {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .account-insights h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .stats-overview,
+  .platform-insights,
+  .visualizations,
+  .account-health {
+    margin-bottom: 20px;
+  }
+  
+  .stats-list,
+  .platform-stats,
+  .account-health ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .stats-list li,
+  .platform-stats li,
+  .account-health li {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .growth {
+    font-weight: bold;
+  }
+  
+  .growth.positive {
+    color: green;
+  }
+  
+  .growth.negative {
+    color: red;
+  }
+  
+  .platform-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .platform-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .platform-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .platform-logo {
+      margin-bottom: 10px;
+    }
+  }
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .stats-list li {
+      font-size: 0.9em;
+    }
+  
+    .platform-card {
+      flex: 1 1 calc(50% - 15px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .account-insights {
+      padding: 15px;
+    }
+  
+    .stats-overview h3,
+    .platform-insights h3,
+    .visualizations h3,
+    .account-health h3 {
+      font-size: 1.2em;
+    }
+  
+    .platform-card {
+      flex: 1 1 100%;
+    }
+  
+    .platform-logo {
+      margin-bottom: 10px;
+    }
+  
+    .stats-list li {
+      font-size: 0.85em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .account-insights h2 {
+      font-size: 1.5em;
+    }
+  
+    .stats-list li {
+      font-size: 0.8em;
+    }
+  
+    .platform-logo {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .platform-card {
+      padding: 8px;
+    }
+  }
+  
+  
+  

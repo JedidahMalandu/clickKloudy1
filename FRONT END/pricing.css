@@ -1,0 +1,226 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(91, 91, 233);
+    color: white;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  /* Pricing Plans Section */
+  .pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .plan {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between the plans */
+  }
+  
+  .plan h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .plan .price {
+    font-size: 1.8em;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .plan .description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .plan ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .plan ul li {
+    margin: 10px 0;
+  }
+  
+  .cta-btn {
+    background-color: rgb(91, 91, 233);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: rgb(91, 91, 233);
+  }
+  
+  /* Comparison Table Section */
+  .comparison-table {
+    padding: 40px;
+    background-color: white;
+    margin-top: 20px;
+  }
+  
+  .comparison-table h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  td {
+    font-size: 1.1em;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .pricing-plans {
+      gap: 20px; /* Reduce gap for medium screens */
+    }
+  
+    .plan {
+      width: 45%; /* Two plans per row */
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    header {
+      padding: 40px 20px; /* Slightly reduced padding for medium screens */
+    }
+  
+    .pricing-plans {
+      gap: 20px;
+    }
+  
+    .plan {
+      width: 45%; /* Two plans per row on tablets */
+      margin-bottom: 20px;
+    }
+  
+    table {
+      font-size: 1em; /* Adjust font size for readability on medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 30px 20px; /* Reduced padding for smaller devices */
+    }
+  
+    h1 {
+      font-size: 2em; /* Adjust title size */
+    }
+  
+    .pricing-plans {
+      flex-direction: column;
+      align-items: center; /* Stack plans vertically */
+    }
+  
+    .plan {
+      width: 90%; /* Plans take more space on small screens */
+      margin-bottom: 20px;
+    }
+  
+    .cta-btn {
+      width: 100%; /* Make buttons full-width */
+    }
+  
+    table {
+      font-size: 0.9em; /* Slightly smaller font size for readability */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    header {
+      padding: 20px 10px; /* Minimal padding for very small screens */
+    }
+  
+    .pricing-plans {
+      padding: 10px; /* Reduced padding for small screens */
+    }
+  
+    h1 {
+      font-size: 1.8em; /* Adjust title size for very small screens */
+    }
+  
+    .plan {
+      width: 100%; /* Full-width plans on very small screens */
+      margin-bottom: 15px; /* Reduced space between the plans */
+    }
+  
+    .cta-btn {
+      width: 100%; /* Make CTA button full width */
+      padding: 12px; /* Adjust button size */
+    }
+  
+    table {
+      font-size: 0.85em; /* Smaller font for tables on small screens */
+    }
+  }
+  
