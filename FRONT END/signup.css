@@ -276,18 +276,33 @@ body {
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Increased to give more space for the eye icon */
+  box-sizing: border-box;
 }
 
 .toggle-password {
-  align-self: flex-end;
-  margin-top: 4px;
-  border: none;
-  background: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  font-size: 16px;
+  user-select: none;
+  z-index: 1;
+  font-size: 1.2rem; /* Added to make the eye icon more visible */
 }
+
 
 /* Tablet view */
 @media (max-width: 768px) {

@@ -1,0 +1,222 @@
+/* Base Styles */
+:root {
+    --primary-blue: #1a73e8;
+    --dark-blue: #1557b0;
+    --light-blue: #f3f8ff;
+    --accent-blue: #e8f0fe;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --border-color: #dadce0;
+    --white: #ffffff;
+}
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: #f8f9fa;
+}
+
+/* Container Styles */
+.privacy-content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 3rem 4rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Header Styles */
+.privacy-content h1 {
+    color: var(--primary-blue);
+    font-size: 2.75rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.last-updated {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+section h2 {
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+section p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+/* List Styles */
+section ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+section ul li {
+    position: relative;
+    color: var(--text-secondary);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    font-size: 1.05rem;
+}
+
+section ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+}
+
+/* Contact Section Styles */
+.contact-details {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-blue);
+    margin-top: 1.5rem;
+}
+
+.contact-details ul {
+    margin: 1rem 0 0 0;
+}
+
+.contact-details li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(26, 115, 232, 0.1);
+}
+
+.contact-details li:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effects */
+section h2:hover {
+    color: var(--primary-blue);
+    transition: color 0.3s ease;
+}
+
+/* Focus States */
+.privacy-content:focus-within {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .privacy-content {
+        margin: 2rem;
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .privacy-content {
+        margin: 1.5rem;
+        padding: 2rem;
+    }
+
+    .privacy-content h1 {
+        font-size: 2.25rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .privacy-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .privacy-content h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.35rem;
+    }
+
+    .contact-details {
+        padding: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .privacy-content {
+        box-shadow: none;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    section h2 {
+        color: black;
+    }
+
+    .contact-details {
+        border: 1px solid #ccc;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-blue: #0045b5;
+        --text-secondary: #363636;
+    }
+
+    section ul li::before {
+        border: 1px solid var(--text-primary);
+    }
+}

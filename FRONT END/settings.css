@@ -1,172 +1,150 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #4e85ce;
-    color: white;
-  }
-  
-  h1 {
-    margin-bottom: 5px;
-    font-size: 2em;
-  }
-  
-  p {
-    font-size: 1.2em;
-    margin: 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .settings-section {
-    background-color: white;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .settings-section h2 {
-    text-align: center;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  input:focus {
-    border-color: #4c56af;
-    outline: none;
-  }
-  
-  small {
-    display: block;
-    font-size: 0.9em;
-    color: gray;
-    margin-top: 5px;
-  }
-  
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4c53af;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    text-transform: uppercase;
-  }
-  
-  .btn:hover {
-    background-color: #4c53af;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #4e85ce;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.settings-section {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: calc(100% - 16px); /* Adjusted to account for padding */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  width: calc(100% - 16px);
+  padding: 8px;
+  padding-right: 35px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.toggle-password:hover {
+  color: #262627;
+}
+
+input:focus {
+  border-color: #0f0f0f;
+  outline: none;
+}
+
+small {
+  display: block;
+  font-size: 0.9em;
+  color: gray;
+  margin-top: 5px;
+}
+
+#removePicture {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4c53af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #0000;
+}
 
 /* Responsive Design */
-@media (max-width: 992px) {
-    .container {
-      margin: 10px 15px;
-      padding: 15px;
-    }
-  
-    header h1 {
-      font-size: 1.8em;
-    }
-  
-    .profile-picture img {
-      width: 80px;
-      height: 80px;
-    }
+@media (max-width: 576px) {
+  .settings-section {
+    padding: 15px;
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="password"],
-    form button {
-      font-size: 0.9em;
-    }
-  
-    .profile-picture img {
-      width: 70px;
-      height: 70px;
-    }
-  
-    .profile-picture button {
-      font-size: 0.8em;
-      padding: 6px 15px;
-    }
+
+  header {
+    padding: 15px 5px;
   }
-  
-  @media (max-width: 576px) {
-    header {
-      padding: 15px 5px;
-    }
-  
-    header h1 {
-      font-size: 1.5em;
-    }
-  
-    .profile-picture {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .profile-picture img {
-      width: 60px;
-      height: 60px;
-    }
-  
-    form {
-      gap: 10px;
-    }
-  
-    form button {
-      font-size: 0.85em;
-      padding: 8px 15px;
-    }
+
+  h1 {
+    font-size: 1.5em;
   }
+}
 
 /* Container */
 .container {
@@ -596,4 +574,14 @@ body {
       height: 25px;
     }
   }
-  
+
+  footer {
+    background-color: gray; /* Gray background */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center-align text */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 1em 0; /* Add spacing inside the footer */
+    margin-top: auto; /* Pushes footer to the bottom if content is shorter */
+  }

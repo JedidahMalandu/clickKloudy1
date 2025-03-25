@@ -52,6 +52,21 @@ header {
   color: #007bff;
 }
 
+/* Toggle menu button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
 /* Hero Section Styles */
 .hero {
   display: flex;
@@ -302,92 +317,108 @@ header {
 }
 
 
-/* Testimonials Section */
-.testimonials {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-}
-
-.testimonials-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
+/* Updated Testimonials Section Styling */
+/* Professional Testimonials Heading Styling */
 .testimonials-heading {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
+  font-size: 1.8rem; /* Slightly larger text for emphasis */
+  font-weight: 600; /* Semi-bold for a clean, professional look */
+  text-align: center; /* Center-aligns the heading */
+  color: #444; /* Darker color for a subtle, professional look */
+  margin-bottom: 2rem; /* Adds space below the heading */
+  letter-spacing: 0.5px; /* Adds slight spacing between letters for readability */
 }
+
 
 .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 3.5rem; /* Increased gap between testimonial cards */
 }
 
 .testimonial-card {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 300px;
+  flex: 1 1 calc(20% - 3.5rem); /* Adjusted for the new gap */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   text-align: left;
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover effect */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Slightly enlarges card on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds deeper shadow on hover */
 }
 
 .user-profile {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  align-items: center; /* Aligns the photo and text vertically */
+  margin-bottom: 1rem; /* Adds spacing between profile and feedback */
+  gap: 1rem; /* Adds space between the photo and text */
 }
 
 .user-photo {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%; /* Makes the photo circular */
+  object-fit: cover; /* Ensures the photo fits the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow around the photo */
 }
 
 .user-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .user-rating {
-  font-size: 1rem;
-  color: #ffa500;
+  font-size: 0.9rem;
+  color: #f39c12; /* Gold color for stars */
+  margin-top: 0.2rem; /* Adds slight spacing between name and stars */
+  line-height: 1; /* Ensures compact star alignment */
+}
+
+/* Align stars properly under the name */
+.user-name + .user-rating {
+  display: inline-block;
+  margin-left: 0;
 }
 
 .user-feedback {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #555; /* Neutral color for readability */
+  line-height: 1.5; /* Improves readability */
 }
 
+/* Trust indicator styling */
 .trust-indicator {
-  margin-top: 30px;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: #777;
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
   .testimonial-card {
-    max-width: 100%;
-  }
-
-  .testimonials-heading {
-    font-size: 2rem;
+    flex: 1 1 calc(33% - 3.5rem); /* 3 cards per row for medium screens */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .testimonial-card {
+    flex: 1 1 calc(50% - 3.5rem); /* 2 cards per row for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial-card {
+    flex: 1 1 100%; /* 1 card per row for small screens */
+  }
+}
+
 
 /* Footer Styles */
 .site-footer {

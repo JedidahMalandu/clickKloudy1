@@ -16,10 +16,13 @@
               <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required placeholder="Enter your password" required>
-                <small>Password must be at least 12 characters, including numbers and special characters.</small>
-            </div>
+              <label for="login-password">Password</label>
+              <div class="password-container">
+                  <input type="password" id="login-password" name="password" required placeholder="Enter your password">
+                  <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+              </div>
+              <small>Password must be at least 12 characters, including numbers and special characters.</small>
+          </div>
             <div class="forgot-password">
               <a href="/forgot-password">Forgot Password?</a>
             </div>
@@ -40,19 +43,28 @@
       
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+        <!-- In the signup form, change this line -->
+        <input type="email" id="signup-email" name="email" required placeholder="Enter your email" />
       </div>
       
       <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required placeholder="Choose a password" />
+        <label for="signup-password">Password</label>
+        <div class="password-container">
+            <input type="password" id="signup-password" name="password" required placeholder="Choose a password">
+            <span class="toggle-password" onclick="togglePassword('signup-password')">👁️</span>
+        </div>
         <small>Password must be at least 12 characters, including numbers and special characters.</small>
-      </div>
-      
-      <div class="form-group">
+    </div>
+    
+    <div class="form-group">
         <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password" />
-      </div>
+        <div class="password-container">
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
+            <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
+        </div>
+    </div>
+    
+    
   
       <!-- Social Media Sign-Up -->
       <div class="social-signup">
@@ -76,6 +88,6 @@
       Don’t have an account? <a href="/signup" class="cta-link">Sign Up</a>
     </p>
   </div>
-    
+  <script src="signup.js"></script>
 </body>
 </html>

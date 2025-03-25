@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="settings.css">
 </head>
 <body>
@@ -16,42 +17,54 @@
     <section class="settings-section">
       <h2>Profile Settings</h2>
       <form id="settingsForm">
-        <!-- Name -->
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
 
-        <!-- Email -->
         <div class="form-group">
           <label for="email">Email Address:</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
           <small id="emailMessage"></small>
         </div>
 
-        <!-- Password -->
         <div class="form-group">
           <label for="current-password">Current Password:</label>
-          <input type="password" id="current-password" name="current-password" placeholder="Enter current password" required>
-        </div>
-        <div class="form-group">
-          <label for="new-password">New Password:</label>
-          <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required>
-          <small id="passwordStrength">Password Strength: Weak</small>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm New Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required>
+          <div class="password-container">
+            <input type="password" id="current-password" name="current-password" placeholder="Enter current password" required>
+            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
         </div>
 
-        <!-- Profile Picture -->
+        <div class="form-group">
+          <label for="new-password">New Password:</label>
+          <div class="password-container">
+            <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required>
+            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <small id="passwordStrength">Password Strength: Weak</small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm New Password:</label>
+          <div class="password-container">
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required>
+            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="profile-picture">Profile Picture:</label>
           <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
           <button type="button" id="removePicture">Remove Picture</button>
         </div>
 
-        <!-- Submit -->
         <button type="submit" class="btn">Save Changes</button>
       </form>
     </section>
@@ -67,7 +80,7 @@
       <div class="accounts">
         <!-- Example of a linked account -->
         <div class="account">
-          <img src="facebook-logo.png" alt="Facebook" class="platform-logo">
+          <img src="images/facebook.png" alt="Facebook" class="platform-logo">
           <div class="account-info">
             <h3>John Doe</h3>
             <p>Status: <span class="status active">Active</span></p>
@@ -79,7 +92,7 @@
         </div>
 
         <div class="account">
-          <img src="twitter-logo.png" alt="Twitter" class="platform-logo">
+          <img src="images/twitter.png" alt="Twitter" class="platform-logo">
           <div class="account-info">
             <h3>@john_doe</h3>
             <p>Status: <span class="status disconnected">Disconnected</span></p>
@@ -198,7 +211,6 @@
   <footer>
     <p>&copy; 2024 clickKloudy. All Rights Reserved.</p>
   </footer>
-
   <script src="settings.js"></script>
 </body>
 </html>

@@ -23,67 +23,105 @@ body {
     font-size: 1.2em;
   }
   
-  /* Pricing Plans Section */
+  h1, h2 {
+    text-align: center;
+    color: white;
+  }
+
   .pricing-plans {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    padding: 40px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px;
+    padding: 20px;
   }
   
   .plan {
-    background-color: white;
-    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Space between the plans */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
   
   .plan h2 {
-    font-size: 2em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   
   .plan .price {
-    font-size: 1.8em;
-    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004aad;;
     margin: 10px 0;
   }
   
   .plan .description {
-    font-size: 1.2em;
+    font-size: 0.9rem;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .plan ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    font-size: 1.1em;
-    color: #555;
+    margin: 0 0 20px 0;
   }
   
   .plan ul li {
-    margin: 10px 0;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #333;
   }
   
   .cta-btn {
-    background-color: rgb(91, 91, 233);
-    color: white;
-    padding: 12px 30px;
+    background-color: #004aad;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
   }
   
   .cta-btn:hover {
-    background-color: rgb(91, 91, 233);
+    background-color: #003a8c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .plan {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .plan {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .plan h2 {
+      font-size: 1.2rem;
+    }
+  
+    .plan .price {
+      font-size: 1.5rem;
+    }
+  
+    .cta-btn {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
   }
   
   /* Comparison Table Section */

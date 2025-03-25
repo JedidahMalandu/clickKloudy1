@@ -1,0 +1,156 @@
+/* Animation-only CSS for ClickKloudy */
+
+/* Header Animations */
+header {
+    transition: transform 0.3s ease-in-out, 
+                background-color 0.3s ease-in-out, 
+                box-shadow 0.3s ease-in-out;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Mobile Menu Animation States */
+.menu-toggle .bar {
+    transition: transform 0.4s ease-in-out, 
+                opacity 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-bar {
+    transition: transform 0.3s ease-in-out,
+                opacity 0.3s ease-in-out,
+                visibility 0.3s ease-in-out;
+}
+
+/* Hero Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-content.animate-fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-visual.animate-slide-in {
+    animation: slideInRight 0.8s ease-out 0.3s forwards;
+}
+
+/* Feature Items Entrance Animation */
+.feature-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out,
+                transform 0.6s ease-out;
+}
+
+.feature-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* How It Works Steps Animation */
+.step {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out,
+                transform 0.6s ease-out;
+}
+
+.step.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonial Card Transitions */
+.testimonial-card {
+    transition: opacity 0.5s ease-in-out,
+                transform 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.testimonial-card.active {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* CTA Button Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.cta-button {
+    transition: transform 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+}
+
+.cta-button.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Social Media Icons Animation */
+.social-media-links a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media-links a:hover img {
+    transform: scale(1.2);
+}
+
+/* Image Loading Animation */
+img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Scroll-triggered Animation Base Class */
+.animate {
+    transition: all 0.5s ease-in-out;
+}
